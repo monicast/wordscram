@@ -10,7 +10,7 @@ from nltk.tag import pos_tag
 
 def find_punct(st):
     """
-    Returns list of tuples with the location correponding punction for items in string
+    Returns list of tuples with the location corresponding punctuation for items in string
     """
     #loc = [c in string.punctuation for c in st]
     loc = [n for n in range(len(st)) if st[n] in string.punctuation]
@@ -22,7 +22,7 @@ def find_punct(st):
 
 def remove_punct(st):
     """
-    Returns string identical to the string passed in except with puncuation removed
+    Returns string identical to the string passed in except with punctuation removed
     """
     if len(st) > 1:
         _ = find_punct(st)
@@ -38,7 +38,7 @@ def remove_punct(st):
 
 def restore_punct(st_np, st_orig):
     """
-    This takes two strings. The first arguments should be a string where you want punction to be injected. The second string is a string with puncuation. The punctuatin in the second string will be added to the corresponding location in the first string
+    This takes two strings. The first arguments should be a string where you want punctuation to be injected. The second string is a string with punctuation. The punctuation in the second string will be added to the corresponding location in the first string
     """
     l_np = list(st_np)
     n=0
